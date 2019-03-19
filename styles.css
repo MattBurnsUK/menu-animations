@@ -1,0 +1,133 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+small {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+  color: inherit;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 300;
+  color: inherit;
+  padding: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+section {
+  height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+/*
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+*/
+
+/* SPLIT */
+
+.first-half, .last-half {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    width: auto;
+    height: auto;
+}
+
+.split a:hover > .first-half {
+    display: inline-block;
+    transform: rotate(-90deg) translateY(-20px);
+    -moz-transform: rotate(-90deg) translateY(-20px);
+    -o-transform: rotate(-90deg) translateY(-20px);
+    -ms-transform: rotate(-90deg) translateY(-20px);
+    -webkit-transform:rotate(-90deg) translateY(-20px);   
+}
+
+.split a:hover > .last-half {
+    display: inline-block;
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform:rotate(90deg); 
+}
+
+
+/* SIMPLE SPLIT */
+.simplesplit a:hover > .first-half {
+    animation: 2s fly-left;
+}
+
+.simplesplit a:hover > .last-half {
+     animation: 2s fly-right;
+}
+
+@keyframes fly-left {
+    0% {
+        position: relative;
+    }
+    100% {
+        position: relative;
+        right: 20px;
+    }
+}
+
+@keyframes fly-right {
+    0% {
+        position: relative;
+    }
+    100% {
+        position: relative;
+        left: 20px;
+    }
+}
