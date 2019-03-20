@@ -73,7 +73,7 @@ nav ul li a:hover {
 
 */
 
-/* SPLIT */
+/* SPLIT AND SPIN */
 
 .first-half, .last-half {
     -webkit-transition: all 1s ease-in-out;
@@ -130,4 +130,50 @@ nav ul li a:hover {
         position: relative;
         left: 20px;
     }
+}
+
+
+/* ARROW ON HOVER */
+
+.arrow-on-hover a:hover::before {
+    content: "->";
+}
+
+
+/* BACKGROUND FILL COLOR SLIDE IN */
+
+.bg-fill-slide .bg-fill {
+    position: absolute;
+    z-index: 1;
+    width: 1px;
+    height: 35px;
+    padding: 2px;
+    background-color: yellow;
+    transition:width 2s;
+    -moz-transition:width 2s; /* Firefox 4 */
+    -webkit-transition:width 2s; /* Safari and Chrome */
+    -o-transition:width 2s; /* Opera */
+}
+
+.bg-fill-slide a {
+    position: relative;
+    width: 90px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+li:hover .bg-fill {
+    width: 130px;
+}
+
+
+/* BORDER BOX DRAW AROUND */
+.box-draw a {
+    position: relative;
+}
+.bottom-left {
+    position: absolute;
+}
+.top-right {
+    position: absolute;
 }
