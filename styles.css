@@ -170,10 +170,86 @@ li:hover .bg-fill {
 /* BORDER BOX DRAW AROUND */
 .box-draw a {
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 5;
+    color: red;
+    width: 130px;
+    background-color: aqua;
 }
 .bottom-left {
+    width: 130px;
+    height: 45px;
+    border: 5px solid green;
     position: absolute;
+    z-index: -1;
+    left: -5px;
+    bottom: 0px;
+    
 }
+
+.bottom-left:hover   -- but not bottom left!! a:hover select bottom left
+    -webkit-animation: bottom-left 4s infinite; /* Safari 4+ */
+    -moz-animation:    bottom-left 4s infinite; /* Fx 5+ */
+    -o-animation:      bottom-left 4s infinite; /* Opera 12+ */
+    animation:         bottom-left 4s infinite; /* IE 10+, Fx 29+ */
+
+
+
 .top-right {
+    width: 130px;
+    height: 45px;
+    border: 5px solid red;
     position: absolute;
+    z-index: -1;
+    left: -9px;
+    bottom: 4px;
+    -webkit-animation: top-right 4s infinite; /* Safari 4+ */
+    -moz-animation:    top-right 4s infinite; /* Fx 5+ */
+    -o-animation:      top-right 4s infinite; /* Opera 12+ */
+    animation:         top-right 4s infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes bottom-left {
+  0%   { width: 0px; height:0px; }
+  25% { width full height 0 }
+    50% {width full height full}
+    75% {nothing new}
+    100% {nothing new}
+}
+@-moz-keyframes bottom-left {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes bottom-left {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes bottom-left {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+@-webkit-keyframes top-right {
+  0%   { width: 0px; height:0px; }
+  25% { nothing new }
+    50% {nothing new}
+    75% {grow width}
+    100% {grow height}
+}
+@-moz-keyframes top-right {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes top-right {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes top-right {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
